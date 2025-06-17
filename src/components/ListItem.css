@@ -1,0 +1,88 @@
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: var(--item-bg, #fff);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.list-item:hover {
+  transform: scale(1.015);
+  cursor: pointer;
+}
+
+/* Avatar */
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Details */
+.details {
+  flex: 1;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-primary, #000);
+}
+
+.subtitle {
+  margin: 4px 0;
+  font-size: 14px;
+  color: var(--text-secondary, #555);
+}
+
+.description {
+  font-size: 14px;
+  margin: 4px 0;
+  color: var(--text-secondary, #666);
+}
+
+.date {
+  font-size: 12px;
+  color: var(--text-tertiary, #888);
+  margin-top: 6px;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Support */
+.light {
+  --item-bg: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #555555;
+  --text-tertiary: #888888;
+}
+
+.dark {
+  --item-bg: #1f1f1f;
+  --text-primary: #ffffff;
+  --text-secondary: #bbbbbb;
+  --text-tertiary: #888888;
+}
